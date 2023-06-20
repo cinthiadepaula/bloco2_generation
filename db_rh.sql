@@ -8,7 +8,7 @@ CREATE TABLE tb_funcionarios(
     sobrenome varchar(255) not null,
     cargo varchar(255) not null,
     idade int,
-    salario decimal not null,
+    salario decimal(4,2)not null,
     PRIMARY KEY (id)
 );
 
@@ -26,8 +26,8 @@ values("Romário", "Barcelos", "Suporte", 22, 1.500);
 
 SELECT * FROM tb_funcionarios where salario > 2.000;
 
-SELECT * FROM tb_funcionarios where salario < 2.000;
+SELECT * FROM tb_funcionarios where salario <= 2.000;
 
-UPDATE tb_funcionarios SET salario = 1.000 where id = 2;
+UPDATE tb_funcionarios SET salario = 1.000 where id=2;
 
 SELECT * FROM tb_funcionarios
